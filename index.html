@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="robots" content="INDEX, FOLLOW">
+        <title>Fundief | Home</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
+    </head>
+
+<body>
+
+    <!-- ========================== Header =========================== -->
+
+    <header>
+        <nav id="navbar">
+            <!-- <div id="nav-c"> -->
+            <ul class="nav-ul">
+                <li class="item"><a href="/index.html">Home</a></li>
+                <li class="item"><a href="/pages/html/about.html">About</a></li>
+                <li class="item"><a href="/pages/html/projects.html">Projects</a></li>
+                <li class="item"><a href="/pages/html/contact.html">Contact</a></li>
+            </ul>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <!-- ========================== Section 1 =========================== -->
+
+    <section id="sec-1">
+        <div class="sec-c1">
+            <h1>Fundief</h1>
+            <h3>Disaster Relief Donation Platform</h3>
+            <div id="sec-c1-search">
+                <div id="area">
+                    <label for="region"></label>
+                    <select name="myRegion" id="region">
+                        <option value="default">Select Region</option>
+                        <option value="IN">India</option>
+                        <option value="AUS">Australia</option>
+                        <option value="CAN">Canada</option>
+                    </select>
+                </div>
+                <div id="searchbar">
+                    <input type="text" id="search" placeholder="Find campaigns...">
+                    <button onclick="performSearch()">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== Section 2 =========================== -->
+
+    <section id="sec-2">
+        <div class="sec-c1-slider">
+            <div class="sec-c1-sliderbox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/urgent/floods.jpg" alt="Flood Cases">
+                    <h2>INDIAN<br>FLOODS</h2>
+                </div>
+                <div class="sec-c1-txtwrapper">
+                    <ul>
+                        <li>Locations: Maharashtra, Gujarat, Andhra Pradesh, and Himachal Pradesh</li>
+                        <li>Casualties: over 100</li>
+                        <li>Affected People: over 464,532</li>
+                        <li>Property Damages: over $1.42 billion</li>
+                    </ul>
+                    <button onclick="navigateToPage()">Donate</button>
+                </div>
+            </div>
+            <div class="sec-c1-sliderbox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/urgent/landslide.jpg" alt="Landslide Cases">
+                    <h2>LANDSLIDES</h2>
+                </div>
+                <div class="sec-c1-txtwrapper">
+                    <ul>
+                        <li>Locations: Wayanad (kerela, India), Yunnan (China), and Papua New Guinea</li>
+                        <li>Casualties: over 3000</li>
+                        <li>Affected People: over 254,455</li>
+                        <li>Property Damages: over $100 million</li>
+                    </ul>
+                    <button onclick="navigateToPage()">Donate</button>
+                </div>
+            </div>
+            <div class="sec-c1-sliderbox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/urgent/wildfire.jpg" alt="Flood Cases">
+                    <h2>WILDFIRES</h2>
+                </div>
+                <div class="sec-c1-txtwrapper">
+                    <ul>
+                        <li>Locations: US, Spain, Canada, Europe, Greece</li>
+                        <li>Casualties: over 500</li>
+                        <li>Affected Land: over 763,425 acres</li>
+                        <li>Property Damages: over $62 billion</li>
+                    </ul>
+                    <button onclick="navigateToPage()">Donate</button>
+                </div>
+            </div>
+        </div>
+        <div id="sec-2-title">
+            <h1>Urgent Campaigns</h1>
+        </div>
+    </section>
+
+    <!-- ========================== Section 3 =========================== -->
+
+    <section id="sec-3">
+        <div class="sec-c1-left">
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>200+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Campaigns have been funded</h3>
+                </div>
+            </div>
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>$2M+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Funds have been donated</h3>
+                </div>
+            </div>
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>4M+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Lives are saved</h3>
+                </div>
+            </div>
+        </div>
+        <div class="sec-c1-right">
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>1.3M+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Animals lives are saved</h3>
+                </div>
+            </div>
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>24K+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Children are back to school</h3>
+                </div>
+            </div>
+            <div class="sec-c1-boxes">
+                <div id="bigtxt">
+                    <h1>1.7M+</h1>
+                </div>
+                <div id="smalltxt">
+                    <h3>Users have donated</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== Section 4 =========================== -->
+
+    <section id="sec-4">
+        <div class="sec-4-title">
+            <h1>Categories</h1>
+        </div>
+        <div class="sec-c1-categories">
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/floods.jpg" alt="FLOODS">
+                    <a href="/pages/html/projects.html#F">
+                        <h2>FLOODS</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/earthquakes.jpg" alt="EARTHQUAKES">
+                    <a href="/pages/html/projects.html#E">
+                        <h2>EARTHQUAKES</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/animals.jpg" alt="ANIMALS">
+                    <a href="/pages/html/projects.html#A">
+                        <h2>ANIMALS</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/wildfires.jpg" alt="WILDFIRES">
+                    <a href="/pages/html/projects.html#W">
+                        <h2>WILDFIRES</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/landslides.jpg" alt="LANDSLIDES">
+                    <a href="/pages/html/projects.html#L">
+                        <h2>LANDSLIDES</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-c1-categorybox">
+                <div class="sec-c1-imgwrapper">
+                    <img src="images/homepage/categories/diseases.jpg" alt="DISEASES">
+                    <a href="/pages/html/projects.html#D">
+                        <h2>DISEASES</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== Footer =========================== -->
+
+  <footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <img src="../../images/logo.png" alt="Fundief" class="footer-logo">
+            <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
+                the victims of natural hazards. Our project, is an attempt to bridge the gap between the communities
+                in need, the providers who can offer and the leveraging technologies that can deliver.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Office <div class="underline"><span></span></div>
+            </h3>
+            <p>NH-4 Highway</p>
+            <p>Mumbai, Maharashtra</p>
+            <p>PIN - 400612, India</p>
+            <p class="footer-mail">info@fundief.com</p>
+            <h4>1800-141-2024</h4>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links<div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/html/about.html">About</a></li>
+                <li><a href="/pages/html/projects.html">Projects</a></li>
+                <li><a href="/pages/html/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter<div class="underline"><span></span></div>
+            </h3>
+            <form id="newsletter-form">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div id="subscribe-success" class="success-msg">Success! You are now a subscriber of our newsletter.
+            </div>
+            <div class="f-social">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; Fundief 2024 | All rights reserved</p>
+</footer>
+</body>
+
+</html>

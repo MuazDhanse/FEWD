@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/payment.css">
+    <script src="../js/payment.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    
+    <form action="" id="paymentForm">
+        <div class="row">
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" id="fullName" placeholder="John Doe" required>
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" id="email" placeholder="example@example.com" required>
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" id="address" placeholder="Apartment - Street - Locality" maxlength="100" required>
+                </div>
+                <div class="inputBox">
+                    <span>State :</span>
+                    <input type="text" id="state" placeholder="Maharashtra" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Country :</span>
+                        <input type="text" id="country" placeholder="India" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" id="zipCode" placeholder="123 456" required pattern="\d{6}">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="../../images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" id="cardName" placeholder="John Doe" required>
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" id="cardNumber" placeholder="1111-2222-3333-4444" required pattern="\d{16}">
+                </div>
+                <div class="inputBox">
+                    <span>expiry month :</span>
+                    <select id="expiryMonth" required>
+                        <option value="" disabled selected>Month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>expiry year :</span>
+                        <input type="number" id="expiryYear" placeholder="YYYY" required pattern="\d{4}">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="number" id="cvv" placeholder="123" required pattern="\d{3}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Confirm Payment" class="submit-btn">
+
+    </form>
+    <div id="py-message" class="py-hidden">
+        <h2>Thank you for your donations! <br>
+            Your payment has been successful.</h2>
+    </div>
+</div>    
+    <p class="copyright">&copy; Fundief 2024 | All rights reserved</p>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="robots" content="INDEX, FOLLOW">
+        <title>Fundief | Donate</title>
+    
+        <link rel="stylesheet" href="../css/donate.css">
+        <script src="../js/donate.js"></script>
+        <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
+    </head>
+
+<body>
+    <!-- ========================== Header =========================== -->
+
+    <header>
+        <nav id="navbar">
+            <!-- <div id="nav-c"> -->
+            <ul class="nav-ul">
+                <li class="item"><a href="/index.html">Home</a></li>
+                <li class="item"><a href="../html/about.html">About</a></li>
+                <li class="item"><a href="../html/projects.html">Projects</a></li>
+                <li class="item"><a href="../html/contact.html">Contact</a></li>
+            </ul>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <!-- ========================== Section 1 =========================== -->
+
+    <section id="sec-1">
+        <div class="donation-container">
+             <div class="leftwrapper">
+                <h1>Select Donation Frequency</h1>
+                <div class="time">
+                    <span>Onetime</span>
+                    <span>Monthly</span>
+                </div>
+
+                <h2>Select amount</h2>
+                <div class="value">
+                    <span class="money">$10</span>
+                    <span class="money">$25</span>
+                    <span class="money">$50</span>
+                    <span class="money">$100</span>
+                    <span class="money">$500</span>
+                </div>
+
+                <div class="input">
+                    <form action="#" id="input-form">
+                        <div class="form-group1">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                
+                        <div class="form-group1">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter valid email address" required>
+                        </div>
+                
+                        <div class="form-group2">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">By donating, you accept our <a href="/terms" target="_blank">Terms of Service</a> & <a href="/privacy" target="_blank">Privacy Policy</a></label>
+                        </div>
+                
+                        <button type="submit" onclick="navigateToPage()">Submit</button>
+                    </form>
+                </div>
+             </div>
+             <div class="rightwrapper">
+                <div class="quote-container">
+                    <img src="/images/quotemark.png">
+                    <h1>In the face of adversity, it is our collective
+                        kindness and compassion that rebuilds shattered
+                        lives and rekindles hope. Together, we can make
+                        a world of difference.</h1>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- ========================== Footer =========================== -->
+
+    <footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <img src="../../images/logo.png" alt="Fundief" class="footer-logo">
+            <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
+                the victims of natural hazards. Our project, is an attempt to bridge the gap between the communities
+                in need, the providers who can offer and the leveraging technologies that can deliver.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Office <div class="underline"><span></span></div>
+            </h3>
+            <p>NH-4 Highway</p>
+            <p>Mumbai, Maharashtra</p>
+            <p>PIN - 400612, India</p>
+            <p class="footer-mail">info@fundief.com</p>
+            <h4>1800-141-2024</h4>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links<div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter<div class="underline"><span></span></div>
+            </h3>
+            <form id="newsletter-form">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div id="subscribe-success" class="success-msg">Success! You are now a subscriber of our newsletter.
+            </div>
+            <div class="f-social">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; Fundief 2024 | All rights reserved</p>
+</footer>
+</body>
+</html>
