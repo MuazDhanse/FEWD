@@ -5,27 +5,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/projects.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" 
+        />
         <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
+
+        <!-- Shraddhesh -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        
         <title>Fundief | Projects</title>
     </head>
 
-        <!-- ========================== Header =========================== -->
     <body>
-        <header>
-            <nav id="navbar">
-                <!-- <div id="nav-c"> -->
-                    <ul class="nav-ul">
-                        <li class="item"><a href="../../index.html">Home</a></li>
-                        <li class="item"><a href="../html/about.html">About</a></li>
-                        <li class="item"><a href="../html/projects.html">Projects</a></li>
-                        <li class="item"><a href="../html/contact.html">Contact</a></li>
-                    </ul>
-                <!-- </div> -->
-            </nav>
-        </header>
+        
+    <!-- ========================== Header =========================== -->
+    
+    <header class= "header">
+        <a href="#" class="logo">Fundief</a>
 
-        <!-- ========================== Section: Priority Slider =========================== -->
-        <section class="sec-1">
+        <input type="checkbox" id="check">
+
+        <label for="check" class="icons">
+            <i class="fa-solid fa-bars" id="menu-icon"></i> 
+            <i class="fa-solid fa-x" id="close-icon"></i>
+        </label>
+
+        <nav id="navbar">
+            <a href="../../index.html" style="--i:0;">Home</a>
+            <a href="../html/about.html" style="--i:1;">About</a>
+            <a href="../html/projects.html" style="--i:2;">Projects</a>
+            <a href="../html/contact.html" style="--i:3;">Contact</a>
+        </nav>
+      </header>
+
+    <!-- ========================== Section: Priority Slider =========================== -->
+    
+    <section class="sec-1">
             <div class="sec-1-heading">
                 <h1 class="h-primary">Priority Projects</h1>
             </div>
@@ -157,6 +174,7 @@
         </section>
 
         <!-- ========================== Sub-Section 2: Earthquake Slider =========================== -->
+        
         <section class="sec">
             <div id="E"><h2 class="h-secondary">Earthquakes</h2></div>
             <button class="prev-btn"><img src="../../images/projects/arrow.png" alt=""></button>
@@ -170,6 +188,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Japan Earthquakes</span>
@@ -177,6 +196,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Taiwan Earthquakes</span>
@@ -184,6 +204,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">China Earthquakes</span>
@@ -191,6 +212,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Indonesia Earthquakes</span>
@@ -198,6 +220,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Poland Earthquakes</span>
@@ -205,6 +228,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Afghanistan Earthquakes</span>
@@ -212,6 +236,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Albania Earthquakes</span>
@@ -219,6 +244,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Tonga Earthquakes</span>
@@ -226,6 +252,7 @@
                         <button class="btn" onclick="navigateToPage()">Donate Now</button>
                     </div>
                 </div>
+                
                 <div class="card">
                     <div class="wrapper">
                         <span class="name">Columbia Earthquakes</span>
@@ -238,6 +265,7 @@
         </section>
        
         <!-- ========================== Sub-Section 3: Animals Slider =========================== -->
+        
         <section class="sec">
             <div id="A"><h2 class="h-secondary">Animals</h2></div>
             <button class="prev-btn"><img src="../../images/projects/arrow.png" alt=""></button>
@@ -319,6 +347,7 @@
         </section>
 
         <!-- ========================== Sub-Section 4: Wildfires Slider =========================== -->
+        
         <section class="sec">
             <div id="W"><h2 class="h-secondary">Wildfires</h2></div>
             <button class="prev-btn"><img src="../../images/projects/arrow.png" alt=""></button>
@@ -400,6 +429,7 @@
         </section>
         
         <!-- ========================== Sub-Section 5: Landslides Slider =========================== -->
+        
         <section class="sec">
             <div id="L"><h2 class="h-secondary">Landslides</h2></div>
             <button class="prev-btn"><img src="../../images/projects/arrow.png" alt=""></button>
@@ -481,6 +511,7 @@
         </section>
 
         <!-- ========================== Sub-Section 6: Diseases Slider =========================== -->
+        
         <section class="sec">
             <div id="D"><h2 class="h-secondary">Diseases</h2></div>
             <button class="prev-btn"><img src="../../images/projects/arrow.png" alt=""></button>
@@ -562,6 +593,7 @@
         </section>
 
         <!-- ========================== Footer =========================== -->
+        
         <footer>
             <div class="footer-row">
                 <div class="footer-col">

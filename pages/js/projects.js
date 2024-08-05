@@ -2,6 +2,14 @@
 #                  Priority Slider
 --------------------------------------------------------- */
 
+// Shraddhesh
+const sliderContainer = document.querySelector('.sec-1-slider');
+const nextButton = document.querySelector('.next');
+setInterval(() => {
+  nextButton.click();
+}, 3000); // move to next slide every 5 seconds
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -51,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 /* ---------------------------------------------------------
 #                  Donate Button

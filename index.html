@@ -9,6 +9,9 @@
         <title>Fundief | Home</title>
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+              integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
     </head>
@@ -17,16 +20,21 @@
 
     <!-- ========================== Header =========================== -->
 
-    <header>
+    <header class= "header">
+        <a href="#" class="logo">Fundief</a>
+
+        <input type="checkbox" id="check">
+
+        <label for="check" class="icons">
+            <i class="fa-solid fa-bars" id="menu-icon"></i> 
+            <i class="fa-solid fa-x" id="close-icon"></i>
+        </label>
+
         <nav id="navbar">
-            <!-- <div id="nav-c"> -->
-            <ul class="nav-ul">
-                <li class="item"><a href="/index.html">Home</a></li>
-                <li class="item"><a href="/pages/html/about.html">About</a></li>
-                <li class="item"><a href="/pages/html/projects.html">Projects</a></li>
-                <li class="item"><a href="/pages/html/contact.html">Contact</a></li>
-            </ul>
-            <!-- </div> -->
+                <a href="index.html" style="--i:0;">Home</a>
+                <a href="/pages/html/about.html" style="--i:1;">About</a>
+                <a href="/pages/html/projects.html" style="--i:2;">Projects</a>
+                <a href="/pages/html/contact.html" style="--i:3;">Contact</a>      
         </nav>
     </header>
 
@@ -226,54 +234,54 @@
 
     <!-- ========================== Footer =========================== -->
 
-  <footer>
-    <div class="footer-row">
-        <div class="footer-col">
-            <img src="../../images/logo.png" alt="Fundief" class="footer-logo">
-            <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
-                the victims of natural hazards. Our project, is an attempt to bridge the gap between the communities
-                in need, the providers who can offer and the leveraging technologies that can deliver.</p>
-        </div>
-        <div class="footer-col">
-            <h3>Office <div class="underline"><span></span></div>
-            </h3>
-            <p>NH-4 Highway</p>
-            <p>Mumbai, Maharashtra</p>
-            <p>PIN - 400612, India</p>
-            <p class="footer-mail">info@fundief.com</p>
-            <h4>1800-141-2024</h4>
-        </div>
-        <div class="footer-col">
-            <h3>Quick Links<div class="underline"><span></span></div>
-            </h3>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/html/about.html">About</a></li>
-                <li><a href="/pages/html/projects.html">Projects</a></li>
-                <li><a href="/pages/html/contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h3>Newsletter<div class="underline"><span></span></div>
-            </h3>
-            <form id="newsletter-form">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-            </form>
-            <div id="subscribe-success" class="success-msg">Success! You are now a subscriber of our newsletter.
+    <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="/images/logo.png" alt="Fundief" class="footer-logo">
+                <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
+                    the victims of natural hazards. Our project is an attempt to bridge the gap between the communities
+                    in need, the providers who can offer and the leveraging technologies that can deliver.</p>
             </div>
-            <div class="f-social">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-youtube"></i>
+            
+            <div class="footer-col">
+                <h3>Office <div class="underline"><span></span></div></h3>
+                <p>NH-4 Highway</p>
+                <p>Mumbai, Maharashtra</p>
+                <p>PIN - 400612, India</p>
+                <p class="footer-mail">info@fundief.com</p>
+                <h4>1800-141-2024</h4>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/html/about.html">About</a></li>
+                    <li><a href="/pages/html/projects.html">Projects</a></li>
+                    <li><a href="/pages/html/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Newsletter<div class="underline"><span></span></div></h3>
+                <form id="newsletter-form">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div id="subscribe-success" class="success-msg">Success! You are now a subscriber of our newsletter.</div>
+                <div class="f-social">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <p class="copyright">&copy; Fundief 2024 | All rights reserved</p>
-</footer>
+        <hr>
+        <p class="copyright">&copy; Fundief 2024 | All rights reserved</p>
+    </footer>
+    
 </body>
 
 </html>
