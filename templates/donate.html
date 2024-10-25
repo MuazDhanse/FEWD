@@ -8,9 +8,9 @@
         <meta name="robots" content="INDEX, FOLLOW">
         <title>Fundief | Donate</title>
     
-        <link rel="stylesheet" href="../css/donate.css">
+        <link rel="stylesheet" href="../static/css/donate.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="../js/donate.js"></script>
+        <script src="../static/js/donate.js"></script>
         <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
     </head>
 
@@ -29,10 +29,10 @@
         </label>
 
         <nav id="navbar">
-                <a href="../../index.html" style="--i:0;">Home</a>
-                <a href="../html/about.html" style="--i:1;">About</a>
-                <a href="../html/projects.html" style="--i:2;">Projects</a>
-                <a href="../html/contact.html" style="--i:3;">Contact</a>      
+            <a href="{{url_for('home')}}" style="--i:0;">Home</a>
+            <a href="{{url_for('about')}}" style="--i:1;">About</a>
+            <a href="{{url_for('projects')}}" style="--i:2;">Projects</a>
+            <a href="{{url_for('contact')}}" style="--i:3;">Contact</a>     
         </nav>
     </header>
 
@@ -79,7 +79,7 @@
              </div>
              <div class="rightwrapper">
                 <div class="quote-container">
-                    <img src="/images/quotemark.png">
+                    <img src="../static/images/quotemark.png">
                     <h1>In the face of adversity, it is our collective
                         kindness and compassion that rebuilds shattered
                         lives and rekindles hope. Together, we can make
@@ -94,7 +94,7 @@
     <footer>
         <div class="footer-row">
             <div class="footer-col">
-                <img src="../../images/logo.png" alt="Fundief" class="footer-logo">
+                <img src="../static/images/logo.png" alt="Fundief" class="footer-logo">
                 <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
                     the victims of natural hazards. Our project, is an attempt to bridge the gap between the communities
                     in need, the providers who can offer and the leveraging technologies that can deliver.</p>
@@ -112,10 +112,10 @@
                 <h3>Quick Links<div class="underline"><span></span></div>
                 </h3>
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../html/about.html">About</a></li>
-                    <li><a href="../html/projects.html">Projects</a></li>
-                    <li><a href="../html/contact.html">Contact</a></li>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('projects')}}">Projects</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">

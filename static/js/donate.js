@@ -63,5 +63,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function navigateToPage() {
-    window.location.href = '../html/payment.html';
+    window.location.href = '/payment';
 }

@@ -3,7 +3,7 @@
 --------------------------------------------------------- */
 
 function navigateToPage() {
-    window.location.href = 'pages/html/donate.html';
+    window.location.href = '/donate'
 }
 
 /* ---------------------------------------------------------
@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -78,3 +76,36 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateSliderBehavior);
 });
 
+/* ---------------------------------------------------------
+#                  Live Location Map
+--------------------------------------------------------- */
+function showPopup(pin) {
+    const title = pin.getAttribute('data-title');
+    const location = pin.getAttribute('data-location');
+    const description = pin.getAttribute('data-description');
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('popup-overlay');
+    overlay.innerHTML = `
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup(this)">&times;</span>
+            <h2>${title}</h2>
+            <p><strong>Location:</strong> ${location}</p>
+            <p>${description}</p>
+            <button onclick="donate()">Donate</button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    overlay.style.display = 'flex';
+}
+
+function closePopup(button) {
+    const overlay = button.closest('.popup-overlay');
+    document.body.removeChild(overlay);
+}
+
+function donate() {
+    window.location.href = '/donate'
+}

@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
               integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
               crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/about.css">
-        <script src="../js/about.js"></script>
+        <link rel="stylesheet" href="../static/css/about.css">
+        <script src="../static/js/about.js"></script>
         <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
         <title>Fundief | About</title>
     </head>
@@ -27,10 +27,10 @@
         </label>
 
         <nav id="navbar">
-                <a href="../../index.html" style="--i:0;">Home</a>
-                <a href="../html/about.html" style="--i:1;">About</a>
-                <a href="../html/projects.html" style="--i:2;">Projects</a>
-                <a href="../html/contact.html" style="--i:3;">Contact</a>      
+            <a href="{{url_for('home')}}" style="--i:0;">Home</a>
+            <a href="{{url_for('about')}}" style="--i:1;">About</a>
+            <a href="{{url_for('projects')}}" style="--i:2;">Projects</a>
+            <a href="{{url_for('contact')}}" style="--i:3;">Contact</a>       
         </nav>
     </header>
 
@@ -38,7 +38,7 @@
 
         <section class="sec-1">
             <video class ="video" autoplay loop muted plays-inline>
-                <source src="../../images/team/bgvid.mp4" type="video/mp4">
+                <source src="../static/images/team/bgvid.mp4" type="video/mp4">
             </video>
                 <div class="heading">
                     <h1>About Us</h1>
@@ -60,7 +60,7 @@
                 <div class="sub-container">
 
                     <div class="teams">
-                        <img src="../../images/team/muaz.jpg" alt="">
+                        <img src="../static/images/team/muaz.jpg" alt="">
                         <div class="name">Muaz Dhanse</div>
                         <div class="desig">CS Engineer, Leader</div>
                         <div class="about">"I am Muaz Dhanse, currently leading my team 'No Brain Cells' whilst we complete our milestone of IBM Internship program. I have always been enthusiastic to learn about new technologies, my skills revolve around Front End Development, Data Analytics, and Project Management."</div>
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="teams">
-                        <img src="../../images/team/maria.jpg" alt="">
+                        <img src="../static/images/team/maria.jpg" alt="">
                         <div class="name">Mariya Dhanse</div>
                         <div class="desig">CS Engineer, Sub-Lead</div>
                         <div class="about">"I am Mariya Dhanse, currently co-ordinating the project proposed by our team 'No Brain Cells' for IBM-led Internship Program. Delving into new techologies is definitely my cup of tea, guess who came up with the group name? FED, Data Science, Documentation - my space."</div>
@@ -88,21 +88,7 @@
                     </div>
 
                     <div class="teams">
-                        <img src="../../images/team/shruti.jpg" alt="">
-                        <div class="name">Shruti Mailaram</div>
-                        <div class="desig">CS Engineer, Web Designer</div>
-                        <div class="about">"I am Shruti Mailaram, a Computer Science Student with a strong focus on Front-end development, Web Designing, and Cloud Computing. I possess skills in HTML,CSS, JavaScript and basic C++. I am passionate about creating impactful web solutions and advancing my knowledge in cloud technologies."</div>
-
-                        <div class="socials">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/shruti-mailaram-abcd01"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://GitHub.com/shrutimailaram"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="teams">
-                        <img src="../../images/team/shraddhu.jpg" alt="">
+                        <img src="../static/images/team/shraddhu.jpg" alt="">
                         <div class="name">Shraddhesh Dhandar</div>
                         <div class="desig">CS Engineer, FE Developer</div>
                         <div class="about">"I'm Shraddhesh Dhandar, a frontend developer enthusiastic about designing intuitive and captivating user interfaces. I've made substantial contributions to numerous projects, emphasizing smooth user interactions and adaptive layouts. My proficiency in HTML, CSS, and JavaScript guarantees superior, effective web solutions."</div>
@@ -116,46 +102,19 @@
                     </div>
 
                     <div class="teams">
-                        <img src="../../images/team/atharva.jpg" alt="">
-                        <div class="name">Atharva Chavan</div>
-                        <div class="desig">CS Engineer, FE Developer</div>
-                        
-                        <div class="socials">
-                            <div class="about">"A proficient Full Stack Developer with extensive experience in designing and developing robust web applications. With a deep understanding of both front-end and back-end technologies."</div>
-                            <a href="https://www.facebook.com/atharva.chavan.125"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/atharva2797"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/atharva-chavan-88432a314"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="teams">
-                        <img src="../../images/team/vishal.png" alt="">
-                        <div class="name">Vishal R. G.</div>
-                        <div class="desig">CS Engineer, Graphics Designer</div>
-                        <div class="about">"I'm VISHAL R G. As a tech enthusiast with a solid foundation in HTML, CSS, Java Beginner, MongoDB, and SQL, I specialize in web development and Java programming. I am dedicated to creating intuitive and efficient web solutions, continuously exploring new technologies and methodologies to enhance my skills and contribute to innovative projects."</div>
+                        <img src="../static/images/team/sanskrit.jpg" alt="">
+                        <div class="name">Sanskriti Gupta</div>
+                        <div class="desig">CS Engineer, Web Designer</div>
+                        <div class="about">"I am Shruti Mailaram, a Computer Science Student with a strong focus on Front-end development, Web Designing, and Cloud Computing. I possess skills in HTML,CSS, JavaScript and basic C++. I am passionate about creating impactful web solutions and advancing my knowledge in cloud technologies."</div>
 
                         <div class="socials">
                             <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/vishal_r_g_03"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/vishalrg"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/VISHALRG03"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/shruti-mailaram-abcd01"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://GitHub.com/shrutimailaram"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-
-                    <div class="teams">
-                        <img src="../../images/team/aniket.png" alt="">
-                        <div class="name">Aniket Bhojapure</div>
-                        <div class="desig">Computer Engineer, Developer</div>
-                        <div class="about">"I'm Aniket Bhojapure, a passionate front-end developer with a keen eye for design and a knack for crafting intuitive user interfaces. Proficient in HTML, CSS, and JavaScript, I create engaging web experiences that seamlessly blend aesthetics and functionality."</div>
-
-                        <div class="socials">
-                            <a href="https://www.facebook.com/aniket.bhojapure.1"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/_aniket_11_03_"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/aniket-bhojapure-a84291286"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/Aniket25-11"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
@@ -164,7 +123,7 @@
         <footer>
             <div class="footer-row">
                 <div class="footer-col">
-                    <img src="../../images/logo.png" alt="Fundief" class="footer-logo">
+                    <img src="../static/images/logo.png" alt="Fundief" class="footer-logo">
                     <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
                         the victims of natural hazards. Our project, is an attempt to bridge the gap between the communities
                         in need, the providers who can offer and the leveraging technologies that can deliver.</p>
@@ -182,10 +141,10 @@
                     <h3>Quick Links<div class="underline"><span></span></div>
                     </h3>
                     <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="../html/about.html">About</a></li>
-                        <li><a href="../html/projects.html">Projects</a></li>
-                        <li><a href="../html/contact.html">Contact</a></li>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('about')}}">About</a></li>
+                        <li><a href="{{url_for('projects')}}">Projects</a></li>
+                        <li><a href="{{url_for('contact')}}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 --------------------------------------------------------- */
 
 function navigateToPage() {
-    window.location.href = '../html/donate.html';
+    window.location.href = '/donate';
 }
 
 

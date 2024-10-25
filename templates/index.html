@@ -8,11 +8,11 @@
         <meta name="robots" content="INDEX, FOLLOW">
         <title>Fundief | Home</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../static/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
               integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
               crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="script.js"></script>
+        <script src="../static/js/script.js"></script>
         <script src="https://kit.fontawesome.com/4adee6fb32.js"></script>
     </head>
 
@@ -31,11 +31,19 @@
         </label>
 
         <nav id="navbar">
-                <a href="index.html" style="--i:0;">Home</a>
-                <a href="/pages/html/about.html" style="--i:1;">About</a>
-                <a href="/pages/html/projects.html" style="--i:2;">Projects</a>
-                <a href="/pages/html/contact.html" style="--i:3;">Contact</a>      
-        </nav>
+            <a href="{{ url_for('home') }}" style="--i:0;">Home</a>
+            <a href="{{ url_for('about') }}" style="--i:1;">About</a>
+            <a href="{{ url_for('projects') }}" style="--i:2;">Projects</a>
+            <a href="{{ url_for('contact') }}" style="--i:3;">Contact</a>
+            {% if session.get('user_id') %}
+                <a href="{{ url_for('profile') }}" id="profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="{{ url_for('logout') }}" id="logout-btn">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" id="login-btn">Login/Register</a>
+            {% endif %}
+        </nav>        
     </header>
 
     <!-- ========================== Section 1 =========================== -->
@@ -68,7 +76,7 @@
         <div class="sec-c1-slider">
             <div class="sec-c1-sliderbox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/urgent/floods.jpg" alt="Flood Cases">
+                    <img src="../static/images/homepage/urgent/floods.jpg" alt="Flood Cases">
                     <h2>INDIAN<br>FLOODS</h2>
                 </div>
                 <div class="sec-c1-txtwrapper">
@@ -83,7 +91,7 @@
             </div>
             <div class="sec-c1-sliderbox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/urgent/landslide.jpg" alt="Landslide Cases">
+                    <img src="../static/images/homepage/urgent/landslide.jpg" alt="Landslide Cases">
                     <h2>LANDSLIDES</h2>
                 </div>
                 <div class="sec-c1-txtwrapper">
@@ -98,7 +106,7 @@
             </div>
             <div class="sec-c1-sliderbox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/urgent/wildfire.jpg" alt="Flood Cases">
+                    <img src="../static/images/homepage/urgent/wildfire.jpg" alt="Flood Cases">
                     <h2>WILDFIRES</h2>
                 </div>
                 <div class="sec-c1-txtwrapper">
@@ -114,6 +122,46 @@
         </div>
         <div id="sec-2-title">
             <h1>Urgent Campaigns</h1>
+        </div>
+    </section>
+
+    <!-- ========================== Section 5 =========================== -->
+
+    <section class="sec-5">
+        <div id="disaster-map">
+            <img src="../static/images/homepage/map.png" alt="Disaster Map">
+            <div class="pins">
+                <div class="pin-icon icon-1" data-title="Landslides" data-location="India" data-description="In July 2024, severe Wayanad landslides killed over 285 people, driven by intense rainfall and environmental degradation." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-2" data-title="Floods" data-location="Africa" data-description="Severe floods across West and Central Africa displaced over 500,000 people, impacting millions and causing widespread destruction." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-3" data-title="Earthquake" data-location="Japan" data-description="On January 1, 2024, a powerful 7.6-magnitude earthquake struck Japan's Noto Peninsula, causing extensive damage, 412 deaths, and significant coastal uplift." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-4" data-title="Wildfire" data-location="Australia" data-description="Severe Australian bushfires, fueled by heat and dry conditions, ravaged New South Wales and Queensland, causing extensive damage." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-5" data-title="Volcanic Eruption" data-location="Kuril Islands" data-description="Russia's Ebeko volcano erupted repeatedly on the Kuril Islands, emitting ash plumes up to 3.5 km high." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-6" data-title="Volcanic Eruption" data-location="United States" data-description="In October 2024, Alaska's Mount Spurr showed increased seismic activity and crater lake formation, prompting an elevated alert level." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-7" data-title="Wildfire" data-location="Brazil" data-description="In 2024, extensive Brazilian wildfires, intensified by drought and deforestation, devastated Amazon and Pantanal regions, impacting ecosystems and biodiversity." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-8" data-title="War Relief" data-location="Ukraine" data-description="Russia's war on Ukraine continued with intensified fighting, missile strikes, and severe civilian impacts, affecting global security and food supplies." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-9" data-title="War Relief" data-location="Israel-Palestine" data-description="Intensified Israel-Palestine violence caused extensive civilian casualties and destruction, amplifying calls for urgent peace efforts." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+                <div class="pin-icon icon-10" data-title="Cyclone" data-location="Bengal" data-description="Cyclone Remal devastated Bengal, killing four, damaging 29,500 homes, uprooting trees, and displacing thousands." onclick="showPopup(this)">
+                    <img src="./static/images/homepage/pin.png" alt="">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -183,7 +231,7 @@
         <div class="sec-c1-categories">
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/floods.jpg" alt="FLOODS">
+                    <img src="../static/images/homepage/categories/floods.jpg" alt="FLOODS">
                     <a href="/pages/html/projects.html#F">
                         <h2>FLOODS</h2>
                     </a>
@@ -191,7 +239,7 @@
             </div>
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/earthquakes.jpg" alt="EARTHQUAKES">
+                    <img src="../static/images/homepage/categories/earthquakes.jpg" alt="EARTHQUAKES">
                     <a href="/pages/html/projects.html#E">
                         <h2>EARTHQUAKES</h2>
                     </a>
@@ -199,7 +247,7 @@
             </div>
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/animals.jpg" alt="ANIMALS">
+                    <img src="../static/images/homepage/categories/animals.jpg" alt="ANIMALS">
                     <a href="/pages/html/projects.html#A">
                         <h2>ANIMALS</h2>
                     </a>
@@ -207,7 +255,7 @@
             </div>
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/wildfires.jpg" alt="WILDFIRES">
+                    <img src="../static/images/homepage/categories/wildfires.jpg" alt="WILDFIRES">
                     <a href="/pages/html/projects.html#W">
                         <h2>WILDFIRES</h2>
                     </a>
@@ -215,7 +263,7 @@
             </div>
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/landslides.jpg" alt="LANDSLIDES">
+                    <img src="../static/images/homepage/categories/landslides.jpg" alt="LANDSLIDES">
                     <a href="/pages/html/projects.html#L">
                         <h2>LANDSLIDES</h2>
                     </a>
@@ -223,7 +271,7 @@
             </div>
             <div class="sec-c1-categorybox">
                 <div class="sec-c1-imgwrapper">
-                    <img src="images/homepage/categories/diseases.jpg" alt="DISEASES">
+                    <img src="../static/images/homepage/categories/diseases.jpg" alt="DISEASES">
                     <a href="/pages/html/projects.html#D">
                         <h2>DISEASES</h2>
                     </a>
@@ -237,7 +285,7 @@
     <footer>
         <div class="footer-row">
             <div class="footer-col">
-                <img src="/images/logo.png" alt="Fundief" class="footer-logo">
+                <img src="../static/images/logo.png" alt="Fundief" class="footer-logo">
                 <p class="aboutme-info">Fundief is a disaster relief oriented donation platform that aims at providing monetary support to
                     the victims of natural hazards. Our project is an attempt to bridge the gap between the communities
                     in need, the providers who can offer and the leveraging technologies that can deliver.</p>
@@ -255,10 +303,10 @@
             <div class="footer-col">
                 <h3>Quick Links<div class="underline"><span></span></div></h3>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/html/about.html">About</a></li>
-                    <li><a href="/pages/html/projects.html">Projects</a></li>
-                    <li><a href="/pages/html/contact.html">Contact</a></li>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('projects')}}">Projects</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
                 </ul>
             </div>
             
